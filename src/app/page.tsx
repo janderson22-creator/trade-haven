@@ -1,7 +1,6 @@
+"use client";
+
 export default function Home() {
-  return (
-    <div className="">
-        <p>teste</p>
-    </div>
-  );
+
+  return <div className=""></div>;
 }
