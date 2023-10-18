@@ -1,3 +1,26 @@
+# Projeto de E-Commerce com React, Next.js e mais
+
+Bem-vindo ao nosso projeto de E-Commerce, uma aplicação web construída usando tecnologias modernas para criar uma experiência de compra online excepcional. Este projeto combina React, Next.js, Next Auth, Postgres, Prisma, shadcn/ui, Tailwind CSS e a API do Stripe para oferecer uma solução completa de comércio eletrônico.
+
+## Tecnologias Principais
+
+- **React:** Utilizamos a biblioteca JavaScript React para construir interfaces de usuário interativas e dinâmicas.
+
+- **Next.js 13:** Baseado no React, o Next.js oferece recursos avançados, incluindo renderização do lado do servidor (SSR) e geração estática (SSG), que tornam nosso site rápido e altamente otimizado.
+
+- **Next Auth:** Usamos o Next Auth para autenticação de usuários com OAuth, garantindo um login seguro e simples.
+
+- **Postgres:** Armazenamos dados relacionais em um banco de dados Postgres confiável.
+
+- **Prisma:** Prisma é nosso ORM (Object-Relational Mapping) que permite interagir facilmente com o banco de dados a partir de Node.js e TypeScript.
+
+- **shadcn/ui:** Aproveitamos a biblioteca shadcn/ui para componentes de IU reutilizáveis e estilizáveis que mantêm nosso design coeso e atraente.
+
+- **Tailwind CSS:** Utilizamos o framework CSS Tailwind CSS para estilizar nossa aplicação. Ele oferece uma variedade de classes pré-estilizadas que aceleram o desenvolvimento.
+
+- **API do Stripe:** Integramos a API do Stripe para processar pagamentos online de forma segura e eficiente. Oferecemos várias opções de pagamento para tornar a experiência do cliente conveniente.
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
