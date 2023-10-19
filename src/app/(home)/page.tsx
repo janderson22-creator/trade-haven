@@ -31,7 +31,7 @@ export default async function Home() {
   });
 
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-8 py-8">
       <div className="p-5">
         <PromoBanner
           src="/banner-home-01.png"
