@@ -14,6 +14,7 @@ interface CategoryItemProps {
 }
 
 const CategoryItem: React.FC<CategoryItemProps> = ({ category }) => {
+  
   const categoryIcon = {
     keyboards: <KeyboardIcon size={16} />,
     monitors: <MonitorIcon size={16} />,
