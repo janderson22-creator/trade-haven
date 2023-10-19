@@ -33,15 +33,13 @@ const ProductItem: React.FC<ProductItemProps> = ({ product }) => {
 
         {product.discountPercentage > 0 ? (
           <div className="flex items-center justify-center gap-2">
-            <p className="font-semibold">
-              R$ {product.totalPrice.toFixed(2)}
-            </p>
+            <p className="font-semibold">R$ {product.totalPrice.toFixed(2)}</p>
             <p className="text-xs line-through opacity-75">
               R$ {Number(product.basePrice.toFixed(2))}
             </p>
           </div>
         ) : (
-          <p className="text-xs line-through opacity-75">
+          <p className="font-semibold">
             R$ {Number(product.basePrice.toFixed(2))}
           </p>
         )}
