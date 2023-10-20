@@ -8,12 +8,11 @@ interface ProductListProps {
 
 const ProductList: React.FC<ProductListProps> = ({ products }) => {
   return (
-    <div className="flex w-full gap-4 overflow-x-auto px-5 [&::-webkit-scrollbar]:hidden">
+    <div className="px-5:hidden flex w-full gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden">
       {products.map((product) => (
-        <ProductItem
-          key={product.id}
-          product={computeProductTotalPrice(product)}
-        />
+        <div key={product.id} className="min-w-[170px] max-w-[170px]">
+          <ProductItem product={computeProductTotalPrice(product)} />
+        </div>
       ))}
     </div>
   );
