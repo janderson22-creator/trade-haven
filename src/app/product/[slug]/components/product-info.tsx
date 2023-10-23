@@ -1,10 +1,9 @@
 "use client";
 
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import DiscountBadge from "@/components/ui/discount-badge";
 import { ProductWithTotalPrice } from "@/helpers/product";
 import {
-  ArrowDown,
   ArrowLeftIcon,
   ArrowRightIcon,
   TruckIcon,
@@ -38,9 +37,7 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         <p>Por:</p>
         <p className="text-xl font-bold">{product.totalPrice.toFixed(2)}</p>
         {product.discountPercentage > 0 && (
-          <Badge className="px-2 py-[2px]">
-            <ArrowDown size={14} /> {product.discountPercentage}%
-          </Badge>
+          <DiscountBadge>{product.discountPercentage}</DiscountBadge>
         )}
       </div>
 
@@ -73,14 +70,18 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         Adicionar ao carrinho
       </Button>
 
-      <div className="flex items-center justify-between bg-accent px-5 py-2 mt-5 rounded-lg">
+      <div className="mt-5 flex items-center justify-between rounded-lg bg-accent px-5 py-2">
         <div className="flex items-center gap-3">
           <TruckIcon />
 
           <div className="flex flex-col">
-              <p className="text-xs">Entrega via <span className="font-bold">FSPacket®</span></p>
+            <p className="text-xs">
+              Entrega via <span className="font-bold">FSPacket®</span>
+            </p>
 
-              <p className="text-[#8162FF] text-xs">Envio para <span className="font-bold">todo Brasil</span></p>
+            <p className="text-xs text-[#8162FF]">
+              Envio para <span className="font-bold">todo Brasil</span>
+            </p>
           </div>
         </div>
 
