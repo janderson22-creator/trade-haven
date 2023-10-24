@@ -3,22 +3,18 @@
 import { Button } from "@/components/ui/button";
 import DiscountBadge from "@/components/ui/discount-badge";
 import { ProductWithTotalPrice } from "@/helpers/product";
-import {
-  ArrowLeftIcon,
-  ArrowRightIcon,
-  TruckIcon,
-} from "lucide-react";
-import { useState } from "react";
+import { CartContext } from "@/providers/cart";
+import { ArrowLeftIcon, ArrowRightIcon, TruckIcon } from "lucide-react";
+import { useContext, useState } from "react";
 
 interface ProductInfoProps {
-  product: Pick<
-    ProductWithTotalPrice,
-    "basePrice" | "description" | "discountPercentage" | "totalPrice" | "name"
-  >;
+  product: ProductWithTotalPrice;
 }
 
 const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
   const [amount, setAmount] = useState(1);
+  const { addProductToCart } = useContext(CartContext);
+
   return (
     <div className="flex flex-col px-5">
       <p className="text-lg">{product.name}</p>
@@ -66,7 +62,10 @@ const ProductInfo: React.FC<ProductInfoProps> = ({ product }) => {
         <p className="text-justify text-sm opacity-60">{product.description}</p>
       </div>
 
-      <Button className="mt-8 font-bold uppercase">
+      <Button
+        className="mt-8 font-bold uppercase"
+        onClick={() => addProductToCart({ ...product, quantity: amount })}
+      >
         Adicionar ao carrinho
       </Button>
 
